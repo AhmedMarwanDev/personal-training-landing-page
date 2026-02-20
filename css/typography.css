@@ -7,6 +7,7 @@
     --font-h3: normal 600 1.25rem/1.3 var(--font-family);
     --font-body: normal 400 1rem/1.5 var(--font-family);
     --font-subheading: normal 400 1.125rem/1.5 var(--font-family);
+    --font-button: normal 600 1.125rem/1 var(--font-family);
     --font-tag: normal 600 0.875rem/1 var(--font-family);
 
     --letter-spacing-h1: -0.02em;
@@ -14,10 +15,15 @@
     --letter-spacing-h3: -0.02em;
     --letter-spacing-body: -0.02em;
     --letter-spacing-subheading: -0.02em;
+    --letter-spacing-button: -0.01em;
     --letter-spacing-tag: -0.02em;
 }
 
-h1, h2 {
+body {
+    font-family: var(--font-family);
+}
+
+h1, h2, .button {
     text-transform: uppercase;
 }
 
@@ -28,7 +34,12 @@ h1 {
 
 h2 {
     font: var(--font-h2);
-    letter-spacing: var(--letter-spacing-h2);
+    letter-spacing: var(--letter-spacing-h2);   
+}
+
+h1 .highlight, h2 .highlight {
+    font: inherit;
+    letter-spacing: inherit;
 }
 
 h3 {
@@ -44,6 +55,11 @@ p, span, pre {
 .subheading {
     font: var(--font-subheading);
     letter-spacing: var(--letter-spacing-subheading);
+}
+
+.button {
+    font: var(--font-button);
+    letter-spacing: var(--letter-spacing-button);
 }
 
 .tag {
