@@ -1,0 +1,45 @@
+:root {
+    --font-family-heading: "Oswald", sans-serif;
+    --font-family: "Inter", sans-serif;
+
+    --font-h1: normal 700 3.5rem/1 var(--font-family-heading);
+    --font-h2: normal 700 3rem/1 var(--font-family-heading);
+    --font-body: normal 400 1rem/1.5 var(--font-family);
+    --font-subheading: normal 400 1.125rem/1.5 var(--font-family);
+    --font-tag: normal 600 0.875rem/1 var(--font-family);
+
+    --letter-spacing-h1: -0.02em;
+    --letter-spacing-h2: -0.02em;
+    --letter-spacing-body: -0.02em;
+    --letter-spacing-subheading: -0.02em;
+    --letter-spacing-tag: -0.02em;
+}
+
+h1, h2 {
+    text-transform: uppercase;
+}
+
+h1 {
+    font: var(--font-h1);
+    letter-spacing: var(--letter-spacing-h1);
+}
+
+h2 {
+    font: var(--font-h2);
+    letter-spacing: var(--letter-spacing-h2);
+}
+
+p, span, pre {
+    font: var(--font-body);
+    letter-spacing: var(--letter-spacing-body);
+}
+
+.subheading {
+    font: var(--font-subheading);
+    letter-spacing: var(--letter-spacing-subheading);
+}
+
+.tag {
+    font: var(--font-tag);
+    letter-spacing: var(--letter-spacing-tag);
+}
