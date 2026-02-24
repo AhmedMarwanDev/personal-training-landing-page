@@ -1,9 +1,9 @@
 :root {
-    --font-family-heading: "Oswald", sans-serif;
+    --font-family-heading: "Anton", sans-serif;
     --font-family: "Roboto", sans-serif;
 
-    --font-h1: normal 700 3.5rem/1 var(--font-family-heading);
-    --font-h2: normal 700 3rem/1.1 var(--font-family-heading);
+    --font-h1: normal 400 3.5rem/1 var(--font-family-heading);
+    --font-h2: normal 400 3rem/1.1 var(--font-family-heading);
     --font-h3: normal 600 1.25rem/1.3 var(--font-family);
     --font-body: normal 400 1rem/1.5 var(--font-family);
     --font-subheading: normal 400 1.125rem/1.4 var(--font-family);
@@ -11,8 +11,8 @@
     --font-button: normal 600 1.125rem/1 var(--font-family);
     --font-tag: normal 600 0.875rem/1 var(--font-family);
 
-    --letter-spacing-h1: -0.02em;
-    --letter-spacing-h2: -0.02em;
+    --letter-spacing-h1: 0;
+    --letter-spacing-h2: 0;
     --letter-spacing-h3: 0;
     --letter-spacing-body: 0;
     --letter-spacing-subheading: 0;
