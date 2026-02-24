@@ -1,22 +1,23 @@
 :root {
     --font-family-heading: "Oswald", sans-serif;
-    --font-family: "Inter", sans-serif;
+    --font-family: "Roboto", sans-serif;
 
     --font-h1: normal 700 3.5rem/1 var(--font-family-heading);
     --font-h2: normal 700 3rem/1.1 var(--font-family-heading);
     --font-h3: normal 600 1.25rem/1.3 var(--font-family);
     --font-body: normal 400 1rem/1.5 var(--font-family);
-    --font-subheading: normal 400 1.125rem/1.5 var(--font-family);
+    --font-subheading: normal 400 1.125rem/1.4 var(--font-family);
+    --font-subheading-bold: normal 600 1.125rem/1.4 var(--font-family);
     --font-button: normal 600 1.125rem/1 var(--font-family);
     --font-tag: normal 600 0.875rem/1 var(--font-family);
 
     --letter-spacing-h1: -0.02em;
     --letter-spacing-h2: -0.02em;
-    --letter-spacing-h3: -0.02em;
-    --letter-spacing-body: -0.02em;
-    --letter-spacing-subheading: -0.02em;
-    --letter-spacing-button: -0.01em;
-    --letter-spacing-tag: -0.02em;
+    --letter-spacing-h3: 0;
+    --letter-spacing-body: 0;
+    --letter-spacing-subheading: 0;
+    --letter-spacing-button: 0;
+    --letter-spacing-tag: 0;
 }
 
 body {
@@ -52,9 +53,18 @@ p, span, pre {
     letter-spacing: var(--letter-spacing-body);
 }
 
+a {
+    font: var(--font-body);
+    letter-spacing: var(--letter-spacing-body);
+}
+
 .subheading {
     font: var(--font-subheading);
     letter-spacing: var(--letter-spacing-subheading);
+}
+
+.subheading-bold {
+    font: var(--font-subheading-bold);
 }
 
 .button {

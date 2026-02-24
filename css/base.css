@@ -37,8 +37,19 @@ h1 .highlight, h2 .highlight {
     color: var(--brand-accent);
 }
 
-.button {
+a {
     text-decoration: none;
+    color: var(--light-text-muted);
+}
+
+a:hover {
+    color: var(--light-text);
+}
+
+.button {
+    display: block;
+    text-decoration: none;
+    text-align: center;
     padding: 1rem 1.5rem;
     background-color: var(--brand-accent);
     border: none;
@@ -47,6 +58,7 @@ h1 .highlight, h2 .highlight {
 }
 
 .tag {
+    display: inline-block;
     width: fit-content;
     height: fit-content;
     padding: 0.25rem 0.75rem;
@@ -56,9 +68,13 @@ h1 .highlight, h2 .highlight {
     border-radius: 12px;
 }
 
+.section:not(.hero) {
+    scroll-padding-top: 5.5rem;
+} 
+
 .section .container {
     margin: 0 auto;
-    width: min(100%, 75rem);
+    width: min(calc(100% - 2.5rem), 75rem);
 }
 
 .section:not(.header, .footer, .hero) .container {
@@ -66,7 +82,11 @@ h1 .highlight, h2 .highlight {
 }
 
 .section.hero .container {
-    padding: 9rem 0;
+    padding: calc(9rem + calc(5.5rem / 2)) 0 9rem;
+}
+
+.section.footer .container {
+    padding: 2.5rem;
 }
 
 .section.section-dark {
@@ -77,4 +97,26 @@ h1 .highlight, h2 .highlight {
 .section.section-light {
     background-color: var(--light-bg);
     color: var(--dark-text-muted);
+}
+
+.navigation {
+    align-self: stretch;
+}
+
+.navigation-links {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    list-style: none;
+    gap: 2.5rem;
+}
+
+.navigation-links li, .navigation-links li a{
+    height: 100%;
+}
+
+.navigation-links a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
