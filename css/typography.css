@@ -24,8 +24,12 @@ body {
     font-family: var(--font-family);
 }
 
-h1, h2, .button {
+h1, h2 {
     text-transform: uppercase;
+}
+
+button {
+    text-transform: capitalize;
 }
 
 h1 {

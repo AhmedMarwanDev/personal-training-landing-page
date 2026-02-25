@@ -51,7 +51,7 @@
     inset: 0;
     filter: grayscale(1);
     background-image:
-        linear-gradient(90deg, #000000 20%, #0000 70%),
+        linear-gradient(90deg, #000000 20%, #0000 90%),
         linear-gradient(90deg, #0000 90%, #000 100%),
         url(../assets/images/hero/bodybuilder-training-arm-with-resistance-band.jpg);
     background-repeat: no-repeat;
@@ -69,7 +69,7 @@
 }
 
 .section.hero h1 {
-    max-width: 36rem;
+    max-width: 30rem;
     margin-bottom: 1rem;
 }
 
@@ -78,18 +78,18 @@
     margin-bottom: 2rem;
 }
 
-/* STRUGGLE
+/* ABOUT
 ========================================================================================================
 */
 
 
-.section.struggle .container{
+.section.about .container{
     display: flex;
     align-items: center;
-    gap: 2.5rem;
+    gap: 3.5rem;
 }
 
-.section.struggle .left img {
+.section.about .left img {
     object-fit: cover;
     object-position: 10% 100%;
     filter: brightness(0.9) grayscale(1);
@@ -97,31 +97,31 @@
 }
 
 
-.section.struggle .heading {
-    margin-bottom: 2rem;
+.section.about .heading {
+    margin-bottom: 1.75rem;
 }
 
-/* PROCESS
+/* PROGRAMS
 ========================================================================================================
 */
 
-.section.process .heading {
+.section.programs .heading {
     text-align: center;
     margin-bottom: 4rem;
 }
 
-.section.process h2 {
+.section.programs h2 {
     margin-bottom: 1rem;
 }
 
-.section.process .cards {
+.section.programs .cards {
     display: flex;
     justify-content: center;
     gap: 2.5rem;
     flex-wrap: wrap;
 }
 
-.section.process .cards .card {
+.section.programs .cards .card {
     flex: 0 0 18rem;
     background-color: var(--dark-bg-light);
     padding: 2rem 1.5rem;
@@ -129,7 +129,7 @@
     text-align: center;
 }
 
-.section.process .cards .card .icon {
+.section.programs .cards .card .icon {
     margin: 0 auto;
     margin-bottom: 1rem;
     display: grid;
@@ -143,7 +143,7 @@
     font-weight: 700;
 }
 
-.section.process .cards .card h3 {
+.section.programs .cards .card h3 {
     margin-bottom: 0.5rem;
 }
 
@@ -197,20 +197,6 @@
 .section.testimonials .cards .card .author .subheading{
     color: var(--dark-text);
 }
-
-
-/* ABOUT
-========================================================================================================
-*/
-
-.section.about .heading {
-    margin-bottom: 2rem;
-}
-
-.section.about .text {
-    max-width: 55rem;
-}
-
 
 /* CONTACT
 ========================================================================================================
