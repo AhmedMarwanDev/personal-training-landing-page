@@ -25,9 +25,62 @@
     fill: var(--text-main);
 }
 
+.section.header .navigation {
+    align-self: stretch;
+}
+
 .section.header .navigation-links a:hover {
     color: var(--text-main);
 }
+
+#open-menu-button {
+    display: none;
+}
+
+/* ASIDE
+========================================================================================================
+*/
+
+.section.aside {
+    display: none;
+    height: 100%;
+    width: 18rem;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 9999;
+    backdrop-filter: blur(4px);
+    background-color: hsla(0, 0%, 0%, 0.65);
+}
+
+.section.aside .navigation-links {
+    flex-direction: column;
+    gap: 0;
+}
+
+.section.aside .navigation-links li {
+    width: 100%;
+}
+
+.section.aside .navigation-links li:hover {
+    background-color: hsla(0, 0%, 100%, 0.1);
+}
+
+#close-menu-button {
+    width: 100%;
+    padding: 1.25rem 2rem;
+}
+
+.section.aside .navigation-links li:has(#close-menu-button) {
+    margin-top: 0.625rem;
+}
+
+.section.aside .navigation-links li a {
+    padding: 1.25rem 2rem;
+    height: 100%;
+    justify-content: flex-start;
+}
+
 
 /* HERO
 ========================================================================================================
@@ -50,7 +103,7 @@
         linear-gradient(90deg, #0000 90%, #000 100%),
         url(../assets/images/hero/bodybuilder-training-arm-with-resistance-band.jpg);
     background-repeat: no-repeat;
-    background-position: -90% -10%;
+    background-position: 75% 0%;
     background-size: cover;
     z-index: -1;
 }
@@ -79,7 +132,7 @@
     gap: 4rem;
 }
 
-.section.about .left img {
+.section.about .img img {
     object-fit: cover;
     object-position: 10% 100%;
     filter: brightness(0.9) grayscale(1);

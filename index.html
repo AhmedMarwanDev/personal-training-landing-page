@@ -8,8 +8,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Anton&family=Roboto:wght@100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/typography.css">
-    <link rel="stylesheet" href="css/base.css"> 
     <link rel="stylesheet" href="css/sections.css">
+    <link rel="stylesheet" href="css/base.css">
 </head>
 <body>
     <div class="root">
@@ -29,9 +29,33 @@
                         <li><a href="#contact">Contact</a></li>
                     </ul>
                 </nav>
+                <button class="button menu-button" id="open-menu-button">
+                    <svg width="31" height="24" viewBox="0 0 31 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M0 3.42857V0H30.8571V3.42857H0ZM0 24V20.5714H30.8571V24H0ZM0 13.7143V10.2857H30.8571V13.7143H0Z" fill="none"/>
+                    </svg>
+                </button>
             </div>
         </header>
         
+        <aside class="section aside">
+            <nav class="navigation">
+                <ul class="navigation-links">
+                    <li>
+                        <button class="button menu-button" id="close-menu-button">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M2.4 24L0 21.6L9.6 12L0 2.4L2.4 0L12 9.6L21.6 0L24 2.4L14.4 12L24 21.6L21.6 24L12 14.4L2.4 24Z" fill="none"/>
+                            </svg>
+                        </button>
+                    </li>
+                    <li><a href="#hero">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#programs">Programs</a></li>
+                    <li><a href="#testimonials">Testimonials</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </aside>
+
         <section id="hero" class="section hero">
             <div class="container">
                 <h1><span class="highlight">Transform</span> Your Body and Life Today</h1>
@@ -42,10 +66,10 @@
         
         <section id="about" class="section about">
             <div class="container">
-                <div class="left">
-                    <img width="400" height="400" src="assets/images/about/portrait-muscular-handsome-bodybuilder-sportswear-standing-with-crossed-arms-studio-isolated-gray-background.jpg" alt="A frustrated muscular man at the gym">
+                <div class="img">
+                    <img width="500" height="500" src="assets/images/about/portrait-muscular-handsome-bodybuilder-sportswear-standing-with-crossed-arms-studio-isolated-gray-background.jpg" alt="A frustrated muscular man at the gym">
                 </div>
-                <div class="right">
+                <div class="text">
                     <div class="heading">
                         <p class="tag">About</p>
                         <h2>Meet your <span class="highlight">trainer</span></h2>
@@ -226,7 +250,7 @@
                 </nav>
                 </div>
                 <div class="bottom">
-                    <p class="copyright">© 2026 Personal Trainer. All rights reserved.</p>
+                    <p class="copyright">© 2026 Personal Trainer. All rights reserved. Images designed by <a href="https://www.freepik.com/">Freepik</a>.</p>
                     <ul class="social-links">
                         <a href="javascript:void(0)" class="facebook">
                             <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -243,5 +267,6 @@
             </div>
         </footer>
     </div>
+    <script src="js/menu-toggle.js"></script>
 </body>
 </html>
