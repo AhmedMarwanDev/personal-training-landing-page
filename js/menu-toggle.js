@@ -1,4 +1,5 @@
 const navigation = document.querySelector(".section.header").querySelector(".navigation");
+const navbarCtaButton = document.querySelector(".section.header").querySelector("#navbar-cta-button");
 const aside = document.querySelector(".section.aside");
 const openMenuButton = document.getElementById("open-menu-button");
 const closeMenuButton = document.getElementById("close-menu-button");
@@ -19,12 +20,14 @@ openMenuButton.addEventListener("click", openMenu);
 closeMenuButton.addEventListener("click", closeMenu);
 
 function toggleMenuVisiblity () {
-    if (window.innerWidth >= 780) {
+    if (window.innerWidth >= 976) {
         navigation.style.display = "block";
+        navbarCtaButton.style.display = "block";
         aside.style.display = "none";
         openMenuButton.style.display = "none";
-    } else if (window.innerWidth < 780) {
+    } else if (window.innerWidth < 976) {
         navigation.style.display = "none";
+        navbarCtaButton.style.display = "none";
         aside.style.display = "none";
         openMenuButton.style.display = "flex";    
     }
@@ -33,7 +36,7 @@ function toggleMenuVisiblity () {
 window.addEventListener("resize", toggleMenuVisiblity);
 
 aside.addEventListener("click", e => {
-    if (e.target.matches("a")) {
+    if (e.target !== aside) {
         closeMenu();
     };
 });
