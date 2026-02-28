@@ -44,9 +44,9 @@ a:hover {
 }
 
 .button {
+    text-transform: capitalize;
     text-decoration: none;
     display: inline-block;
-    text-decoration: none;
     text-align: center;
     padding: 1rem 1.5rem;
     background-color: var(--brand-accent);
