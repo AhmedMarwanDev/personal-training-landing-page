@@ -12,8 +12,7 @@
     --text-main: hsl(0, 0%, 100%);
     --text-muted: hsl(0, 0%, 80%);
 
-    --brand-accent: hsl(45, 100%, 50%);
-    --brand-accent-gradient: linear-gradient(to bottom, hsl(45, 100%, 50%), hsl(65, 100%, 50%));
+    --brand-accent: hsl(125, 100%, 50%);
 }
 
 html, body {
@@ -28,11 +27,7 @@ h1, h2, h3 {
 }
 
 h1 .highlight, h2 .highlight {
-    background-image: var(--brand-accent-gradient);
-    background-clip: text;
-    color: transparent;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    color: var(--brand-accent);
 }
 
 a {
@@ -50,8 +45,6 @@ a:hover {
     text-align: center;
     padding: 1rem 1.5rem;
     background-color: var(--brand-accent);
-    background-image: var(--brand-accent-gradient);
-    border: 1px solid var(--brand-accent);
     color: hsl(0, 0%, 0%);
     border-radius: 8px;
     cursor: pointer;
@@ -85,11 +78,7 @@ a:hover {
     height: fit-content;
     padding: 0.25rem 0.75rem;
     margin-bottom: 0.75rem;
-    background-image: var(--brand-accent-gradient);
-    background-clip: text;
-    color: transparent;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    color: var(--brand-accent);
     border: 1px solid var(--brand-accent);
     z-index: 990;
     border-radius: 12px;

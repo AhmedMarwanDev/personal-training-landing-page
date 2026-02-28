@@ -180,7 +180,6 @@
     width: 3.5rem;
     height: 3.5rem;
     background-color: var(--brand-accent);
-    background-image: var(--brand-accent-gradient);
     color: var(--text-main);
     border-radius: 1000px;
     font-size: 1.5rem;
@@ -238,12 +237,11 @@
 .section.testimonials .cards .card .text .icon {
     display: flex;
     margin-bottom: 1rem;
-    color: red;
 }
 
-/* .section.testimonials .cards .card .text .icon svg path{
-    fill: var(--brand-accent-gradient);
-} */
+.section.testimonials .cards .card .text .icon svg path{
+    fill: var(--brand-accent);
+}
 
 .section.testimonials .cards .card .author {
     display: flex;
