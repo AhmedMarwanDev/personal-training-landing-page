@@ -1,3 +1,33 @@
+@font-face {
+    font-family: "Anton";
+    src:
+        url(https://ahmedmarwandev.github.io/personal-training-landing-page/assets/fonts/Anton/subset-Anton-Regular.woff2) format("woff2"),
+        url(https://ahmedmarwandev.github.io/personal-training-landing-page/assets/fonts/Anton/subset-Anton-Regular.woff) format("woff");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Roboto";
+    src:
+        url(https://ahmedmarwandev.github.io/personal-training-landing-page/assets/fonts/Roboto/subset-Roboto-Regular.woff2) format("woff2"),
+        url(https://ahmedmarwandev.github.io/personal-training-landing-page/assets/fonts/Roboto/subset-Roboto-Regular.woff) format("woff");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Roboto";
+    src:
+        url(https://ahmedmarwandev.github.io/personal-training-landing-page/assets/fonts/Roboto/subset-Roboto-SemiBold.woff2) format("woff2"),
+        url(https://ahmedmarwandev.github.io/personal-training-landing-page/assets/fonts/Roboto/subset-Roboto-SemiBold.woff) format("woff");
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
 :root {
     --font-family-heading: "Anton", sans-serif;
     --font-family: "Roboto", sans-serif;
@@ -26,10 +56,6 @@ body {
 
 h1, h2 {
     text-transform: uppercase;
-}
-
-button {
-    text-transform: capitalize;
 }
 
 h1 {

@@ -4,9 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Personal Training Website</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Roboto:wght@100..900&display=swap" rel="stylesheet">
+    <meta name="description" content="a simple mock landing page for a personal training">
+
+    <link rel="preload" href="https://ahmedmarwandev.github.io/personal-training-landing-page/assets/fonts/Anton/subset-Anton-Regular.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="https://ahmedmarwandev.github.io/personal-training-landing-page/assets/fonts/Anton/subset-Anton-Regular.woff" as="font" type="font/woff" crossorigin>
+    
+    <link rel="preload" href="https://ahmedmarwandev.github.io/personal-training-landing-page/assets/fonts/Roboto/subset-Roboto-Regular.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="https://ahmedmarwandev.github.io/personal-training-landing-page/assets/fonts/Roboto/subset-Roboto-Regular.woff" as="font" type="font/woff" crossorigin>
+    
+    <link rel="preload" href="https://ahmedmarwandev.github.io/personal-training-landing-page/assets/fonts/Roboto/subset-Roboto-SemiBold.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="https://ahmedmarwandev.github.io/personal-training-landing-page/assets/fonts/Roboto/subset-Roboto-SemiBold.woff" as="font" type="font/woff" crossorigin>
+
+    <link rel="preload" as="image" href="https://ahmedmarwandev.github.io/personal-training-landing-page/assets/images/hero/bodybuilder-training-arm-with-resistance-band.webp" fetchpriority="high">
+
     <link rel="stylesheet" href="css/typography.css">
     <link rel="stylesheet" href="css/sections.css">
     <link rel="stylesheet" href="css/base.css">
@@ -20,7 +30,7 @@
                        <path d="M9.1 14.0004H4.9C3.73625 14.0004 2.8 14.9366 2.8 16.1004V25.2004H0.7C0.315 25.2004 0 25.5154 0 25.9004V30.1004C0 30.4854 0.315 30.8004 0.7 30.8004H2.8V39.9004C2.8 41.0641 3.73625 42.0004 4.9 42.0004H9.1C10.2637 42.0004 11.2 41.0641 11.2 39.9004V16.1004C11.2 14.9366 10.2637 14.0004 9.1 14.0004ZM55.3 25.2004H53.2V16.1004C53.2 14.9366 52.2637 14.0004 51.1 14.0004H46.9C45.7362 14.0004 44.8 14.9366 44.8 16.1004V39.9004C44.8 41.0641 45.7362 42.0004 46.9 42.0004H51.1C52.2637 42.0004 53.2 41.0641 53.2 39.9004V30.8004H55.3C55.685 30.8004 56 30.4854 56 30.1004V25.9004C56 25.5154 55.685 25.2004 55.3 25.2004ZM39.9 8.40039H35.7C34.5362 8.40039 33.6 9.33664 33.6 10.5004V25.2004H22.4V10.5004C22.4 9.33664 21.4637 8.40039 20.3 8.40039H16.1C14.9362 8.40039 14 9.33664 14 10.5004V45.5004C14 46.6641 14.9362 47.6004 16.1 47.6004H20.3C21.4637 47.6004 22.4 46.6641 22.4 45.5004V30.8004H33.6V45.5004C33.6 46.6641 34.5362 47.6004 35.7 47.6004H39.9C41.0637 47.6004 42 46.6641 42 45.5004V10.5004C42 9.33664 41.0637 8.40039 39.9 8.40039Z" fill="none"/>
                     </svg>
                 </div>
-                <nav class="navigation">
+                <nav class="navigation" aria-label="desktop navigation">
                     <ul class="navigation-links">
                         <li><a href="#hero">Home</a></li>
                         <li><a href="#about">About</a></li>
@@ -29,24 +39,22 @@
                     </ul> 
                 </nav>
                 <a href="#contact" class="button" id="navbar-cta-button">Book a Free Session</a>
-                <button class="menu-button" id="open-menu-button">
+                <button class="menu-button" id="open-menu-button" title="Open navigation menu" aria-label="open navigation menu" aria-label="Open navigation menu" aria-expanded="false" aria-controls="mobile-menu">
                     <svg width="31" height="24" viewBox="0 0 31 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M0 3.42857V0H30.8571V3.42857H0ZM0 24V20.5714H30.8571V24H0ZM0 13.7143V10.2857H30.8571V13.7143H0Z" fill="none"/>
                     </svg>
                 </button>
             </div>
         </header>
-        
-        <aside class="section aside">
-            <nav class="navigation">
+
+        <div id="mobile-menu" class="mobile-menu" aria-hidden="true">
+            <nav class="navigation" aria-label="mobile navigation">
+                <button class="menu-button" id="close-menu-button" title="Close navigation menu" aria-label="close navigation menu" aria-controls="mobile-menu">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M2.4 24L0 21.6L9.6 12L0 2.4L2.4 0L12 9.6L21.6 0L24 2.4L14.4 12L24 21.6L21.6 24L12 14.4L2.4 24Z" fill="none"/>
+                    </svg>
+                </button>
                 <ul class="navigation-links">
-                    <li>
-                        <button class="menu-button" id="close-menu-button">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M2.4 24L0 21.6L9.6 12L0 2.4L2.4 0L12 9.6L21.6 0L24 2.4L14.4 12L24 21.6L21.6 24L12 14.4L2.4 24Z" fill="none"/>
-                            </svg>
-                        </button>
-                    </li>
                     <li><a href="#hero">Home</a></li>
                     <li><a href="#about">About</a></li>
                     <li><a href="#programs">Programs</a></li>
@@ -54,164 +62,168 @@
                     <li><a href="#contact" class="button">Book a Free Session</a></li>
                 </ul>
             </nav>
-        </aside>
+        </div>
 
-        <section id="hero" class="section hero">
-            <div class="container">
-                <h1><span class="highlight">Transform</span> Your Body and Life Today</h1>
-                <p class="subheading">Personalized programs to help you get stronger, leaner, and healthier. Even if you've struggled before.</p>
-                <a href="#contact" class="button">Start your transformation</a>
-            </div>
-        </section>
-        
-        <section id="about" class="section about">
-            <div class="container">
-                <div class="img">
-                    <img width="500" height="500" src="assets/images/about/portrait-muscular-handsome-bodybuilder-sportswear-standing-with-crossed-arms-studio-isolated-gray-background.webp" alt="A frustrated muscular man at the gym">
+        <main>
+
+            <section id="hero" class="section hero">
+                <div class="container">
+                    <h1><span class="highlight">Transform</span> Your Body and Life Today</h1>
+                    <p class="subheading">Personalized programs to help you get stronger, leaner, and healthier. Even if you've struggled before.</p>
+                    <a href="#contact" class="button">Start your transformation</a>
                 </div>
-                <div class="text">
+            </section>
+            
+            <section id="about" class="section about">
+                <div class="container">
+                    <div class="img">
+                        <img loading="lazy" width="500" height="500" src="assets/images/about/portrait-muscular-handsome-bodybuilder-sportswear-standing-with-crossed-arms-studio-isolated-gray-background.webp" alt="A frustrated muscular man at the gym">
+                    </div>
+                    <div class="text">
+                        <div class="heading">
+                            <p class="tag">About</p>
+                            <h2>Meet your <span class="highlight">trainer</span></h2>
+                        </div>
+                        <p>With years of experience in personal training and fitness coaching, I create programs tailored to your goals — whether it’s building strength, losing weight, or staying active. Every workout is designed to maximize results safely and efficiently.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section id="programs" class="section programs">
+                <div class="container">
                     <div class="heading">
-                        <p class="tag">About</p>
-                        <h2>Meet your <span class="highlight">trainer</span></h2>
+                        <p class="tag">Programs</p>
+                        <h2>Coaching programs</h2>
+                        <p class="subheading">Choose the program that fits your goals and lifestyle.</p>
                     </div>
-                    <p>With years of experience in personal training and fitness coaching, I create programs tailored to your goals — whether it’s building strength, losing weight, or staying active. Every workout is designed to maximize results safely and efficiently.</p>
-                </div>
-            </div>
-        </section>
-
-        <section id="programs" class="section programs">
-            <div class="container">
-                <div class="heading">
-                    <p class="tag">Programs</p>
-                    <h2>Coaching programs</h2>
-                    <p class="subheading">Choose the program that fits your goals and lifestyle.</p>
-                </div>
-                <div class="cards">
-                    <div class="card">
-                        <div class="icon">
-                            <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M30.3386 11.2673L20.6526 1.58139L21.333 0.900977C21.9468 0.287268 22.7072 -0.0129157 23.6144 0.000425792C24.5217 0.0137673 25.2821 0.327292 25.8958 0.941001L31.059 6.10416C31.6727 6.71787 31.9796 7.47166 31.9796 8.36554C31.9796 9.25942 31.6727 10.0132 31.059 10.6269L30.3386 11.2673ZM10.6065 31.0794C9.99278 31.6931 9.23899 32 8.3451 32C7.45122 32 6.69743 31.6931 6.08372 31.0794L0.920563 25.9163C0.306854 25.3026 0 24.5488 0 23.6549C0 22.761 0.306854 22.0072 0.920563 21.3935L1.56095 20.7531L11.2469 30.439L10.6065 31.0794ZM16.41 29.9588C16.0898 30.2789 15.7163 30.439 15.2894 30.439C14.8624 30.439 14.4889 30.2789 14.1687 29.9588L2.04125 17.8313C1.72105 17.5111 1.56095 17.1376 1.56095 16.7106C1.56095 16.2837 1.72105 15.9102 2.04125 15.59L4.32264 13.2685C4.64284 12.9483 5.02307 12.7882 5.46334 12.7882C5.90361 12.7882 6.28384 12.9483 6.60404 13.2685L9.12558 15.7901L15.7696 9.14602L13.2481 6.62448C12.9279 6.30428 12.7678 5.93072 12.7678 5.50379C12.7678 5.07686 12.9279 4.7033 13.2481 4.38311L15.5295 2.06169C15.8497 1.74149 16.2299 1.58139 16.6702 1.58139C17.1105 1.58139 17.4907 1.74149 17.8109 2.06169L29.9383 14.1891C30.2585 14.5093 30.4186 14.8895 30.4186 15.3298C30.4186 15.7701 30.2585 16.1503 29.9383 16.4705L27.6169 18.7519C27.2967 19.0721 26.9231 19.2322 26.4962 19.2322C26.0693 19.2322 25.6957 19.0721 25.3755 18.7519L22.854 16.2304L16.2099 22.8744L18.7315 25.396C19.0517 25.7162 19.2118 26.0964 19.2118 26.5367C19.2118 26.9769 19.0517 27.3572 18.7315 27.6774L16.41 29.9588Z" fill="black"/>
-                            </svg>
-                        </div>
-                        <div class="text">    
-                            <h3>Personal training</h3>
-                            <p>One-on-one sessions focused on strength, fat loss, and overall performance improvement.</p>
-                        </div>
-                        <button class="button button-small">Get Started</button>
-                    </div>
-                    <div class="card">
-                        <div class="icon">
-                            <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M23 0H9C7.34375 0 6 1.34375 6 3V29C6 30.6562 7.34375 32 9 32H23C24.6562 32 26 30.6562 26 29V3C26 1.34375 24.6562 0 23 0ZM16 30C14.8937 30 14 29.1063 14 28C14 26.8937 14.8937 26 16 26C17.1063 26 18 26.8937 18 28C18 29.1063 17.1063 30 16 30ZM23 23.25C23 23.6625 22.6625 24 22.25 24H9.75C9.3375 24 9 23.6625 9 23.25V3.75C9 3.3375 9.3375 3 9.75 3H22.25C22.6625 3 23 3.3375 23 3.75V23.25Z" fill="black"/>
-                            </svg>
-                        </div>
-                        <div class="text">
-                            <h3>Online coaching</h3>
-                            <p>Train from anywhere with structured programs and direct support.</p>
-                        </div>
-                        <button class="button button-small">Join Online</button>
-                    </div>
-                    <div class="card">
-                        <div class="icon">
-                            <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M9.32749 29.3337L14.6574 19.3337L3.99756 18.0003L19.9873 2.66699H22.6523L17.3224 12.667L27.9822 14.0003L11.9924 29.3337H9.32749Z" fill="black"/>
-                            </svg>
-                        </div>
-                        <div class="text">
-                            <h3>12-week transformation</h3>
-                            <p>A complete body transformation program designed for maximum results.</p>
-                        </div>
-                        <button class="button button-small">Apply Now</button>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="testimonials" class="section testimonials">
-            <div class="container">
-                <div class="heading">
-                    <p class="tag">Testimonials</p>
-                    <h2>What <span class="highlight">my clients</span> say</h2>
-                    <p class="subheading">See how personalized coaching makes a difference.</p>
-                </div>
-                <div class="cards">
-                    <div class="card">
-                        <div class="text">
+                    <div class="cards">
+                        <div class="card">
                             <div class="icon">
-                                <svg width="27" height="24" viewBox="0 0 27 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M24.4688 12H20.25V8.57143C20.25 6.68036 21.7635 5.14286 23.625 5.14286H24.0469C24.7482 5.14286 25.3125 4.56964 25.3125 3.85714V1.28571C25.3125 0.573214 24.7482 0 24.0469 0H23.625C18.9633 0 15.1875 3.83571 15.1875 8.57143V21.4286C15.1875 22.8482 16.3213 24 17.7188 24H24.4688C25.8662 24 27 22.8482 27 21.4286V14.5714C27 13.1518 25.8662 12 24.4688 12ZM9.28125 12H5.0625V8.57143C5.0625 6.68036 6.57598 5.14286 8.4375 5.14286H8.85938C9.56074 5.14286 10.125 4.56964 10.125 3.85714V1.28571C10.125 0.573214 9.56074 0 8.85938 0H8.4375C3.77578 0 0 3.83571 0 8.57143V21.4286C0 22.8482 1.13379 24 2.53125 24H9.28125C10.6787 24 11.8125 22.8482 11.8125 21.4286V14.5714C11.8125 13.1518 10.6787 12 9.28125 12Z" fill="none"/>
+                                <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M30.3386 11.2673L20.6526 1.58139L21.333 0.900977C21.9468 0.287268 22.7072 -0.0129157 23.6144 0.000425792C24.5217 0.0137673 25.2821 0.327292 25.8958 0.941001L31.059 6.10416C31.6727 6.71787 31.9796 7.47166 31.9796 8.36554C31.9796 9.25942 31.6727 10.0132 31.059 10.6269L30.3386 11.2673ZM10.6065 31.0794C9.99278 31.6931 9.23899 32 8.3451 32C7.45122 32 6.69743 31.6931 6.08372 31.0794L0.920563 25.9163C0.306854 25.3026 0 24.5488 0 23.6549C0 22.761 0.306854 22.0072 0.920563 21.3935L1.56095 20.7531L11.2469 30.439L10.6065 31.0794ZM16.41 29.9588C16.0898 30.2789 15.7163 30.439 15.2894 30.439C14.8624 30.439 14.4889 30.2789 14.1687 29.9588L2.04125 17.8313C1.72105 17.5111 1.56095 17.1376 1.56095 16.7106C1.56095 16.2837 1.72105 15.9102 2.04125 15.59L4.32264 13.2685C4.64284 12.9483 5.02307 12.7882 5.46334 12.7882C5.90361 12.7882 6.28384 12.9483 6.60404 13.2685L9.12558 15.7901L15.7696 9.14602L13.2481 6.62448C12.9279 6.30428 12.7678 5.93072 12.7678 5.50379C12.7678 5.07686 12.9279 4.7033 13.2481 4.38311L15.5295 2.06169C15.8497 1.74149 16.2299 1.58139 16.6702 1.58139C17.1105 1.58139 17.4907 1.74149 17.8109 2.06169L29.9383 14.1891C30.2585 14.5093 30.4186 14.8895 30.4186 15.3298C30.4186 15.7701 30.2585 16.1503 29.9383 16.4705L27.6169 18.7519C27.2967 19.0721 26.9231 19.2322 26.4962 19.2322C26.0693 19.2322 25.6957 19.0721 25.3755 18.7519L22.854 16.2304L16.2099 22.8744L18.7315 25.396C19.0517 25.7162 19.2118 26.0964 19.2118 26.5367C19.2118 26.9769 19.0517 27.3572 18.7315 27.6774L16.41 29.9588Z" fill="black"/>
                                 </svg>
                             </div>
-                            <p>I’ve tried multiple programs before, but this was the first time I saw real progress. I gained strength, lost fat, and actually enjoyed training again.</p>
+                            <div class="text">    
+                                <h3>Personal training</h3>
+                                <p>One-on-one sessions focused on strength, fat loss, and overall performance improvement.</p>
+                            </div>
+                            <button class="button button-small">Get Started</button>
                         </div>
-                        <div class="author">
+                        <div class="card">
                             <div class="icon">
-                                <svg width="48" height="48" viewBox="0 0 49 49" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M8.6975 38.2813C11.27 36.4846 13.8221 35.1065 16.3538 34.1469C18.8854 33.1873 21.6008 32.7075 24.5 32.7075C27.3992 32.7075 30.1248 33.1873 32.6769 34.1469C35.229 35.1065 37.7913 36.4846 40.3638 38.2813C42.1604 36.0763 43.4365 33.8508 44.1919 31.605C44.9473 29.3592 45.325 26.9908 45.325 24.5C45.325 18.5792 43.3344 13.6281 39.3531 9.64688C35.3719 5.66563 30.4208 3.675 24.5 3.675C18.5792 3.675 13.6281 5.66563 9.64688 9.64688C5.66563 13.6281 3.675 18.5792 3.675 24.5C3.675 26.9908 4.06292 29.3592 4.83875 31.605C5.61458 33.8508 6.90083 36.0763 8.6975 38.2813ZM18.5281 23.9181C16.9152 22.3052 16.1088 20.3146 16.1088 17.9463C16.1088 15.5779 16.9152 13.5873 18.5281 11.9744C20.141 10.3615 22.1317 9.555 24.5 9.555C26.8683 9.555 28.859 10.3615 30.4719 11.9744C32.0848 13.5873 32.8913 15.5779 32.8913 17.9463C32.8913 20.3146 32.0848 22.3052 30.4719 23.9181C28.859 25.531 26.8683 26.3375 24.5 26.3375C22.1317 26.3375 20.141 25.531 18.5281 23.9181ZM24.5 49C21.1517 49 17.9871 48.3569 15.0063 47.0706C12.0254 45.7844 9.42229 44.0285 7.19688 41.8031C4.97146 39.5777 3.21563 36.9746 1.92938 33.9938C0.643125 31.0129 0 27.8483 0 24.5C0 21.1108 0.643125 17.936 1.92938 14.9756C3.21563 12.0152 4.97146 9.42229 7.19688 7.19688C9.42229 4.97146 12.0254 3.21563 15.0063 1.92938C17.9871 0.643125 21.1517 0 24.5 0C27.8892 0 31.064 0.643125 34.0244 1.92938C36.9848 3.21563 39.5777 4.97146 41.8031 7.19688C44.0285 9.42229 45.7844 12.0152 47.0706 14.9756C48.3569 17.936 49 21.1108 49 24.5C49 27.8483 48.3569 31.0129 47.0706 33.9938C45.7844 36.9746 44.0285 39.5777 41.8031 41.8031C39.5777 44.0285 36.9848 45.7844 34.0244 47.0706C31.064 48.3569 27.8892 49 24.5 49ZM31.0844 44.345C33.2281 43.6917 35.3413 42.5483 37.4238 40.915C35.3413 39.445 33.2179 38.3221 31.0538 37.5463C28.8896 36.7704 26.705 36.3825 24.5 36.3825C22.295 36.3825 20.1104 36.7704 17.9463 37.5463C15.7821 38.3221 13.6588 39.445 11.5762 40.915C13.6588 42.5483 15.7719 43.6917 17.9156 44.345C20.0594 44.9983 22.2542 45.325 24.5 45.325C26.7458 45.325 28.9406 44.9983 31.0844 44.345ZM27.8994 21.3456C28.7773 20.4677 29.2163 19.3346 29.2163 17.9463C29.2163 16.5579 28.7773 15.4248 27.8994 14.5469C27.0215 13.669 25.8883 13.23 24.5 13.23C23.1117 13.23 21.9785 13.669 21.1006 14.5469C20.2227 15.4248 19.7837 16.5579 19.7837 17.9463C19.7837 19.3346 20.2227 20.4677 21.1006 21.3456C21.9785 22.2235 23.1117 22.6625 24.5 22.6625C25.8883 22.6625 27.0215 22.2235 27.8994 21.3456Z" fill="none"/>
+                                <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M23 0H9C7.34375 0 6 1.34375 6 3V29C6 30.6562 7.34375 32 9 32H23C24.6562 32 26 30.6562 26 29V3C26 1.34375 24.6562 0 23 0ZM16 30C14.8937 30 14 29.1063 14 28C14 26.8937 14.8937 26 16 26C17.1063 26 18 26.8937 18 28C18 29.1063 17.1063 30 16 30ZM23 23.25C23 23.6625 22.6625 24 22.25 24H9.75C9.3375 24 9 23.6625 9 23.25V3.75C9 3.3375 9.3375 3 9.75 3H22.25C22.6625 3 23 3.3375 23 3.75V23.25Z" fill="black"/>
                                 </svg>
                             </div>
                             <div class="text">
-                                <p class="subheading subheading-bold">Michael R.</p>
-                                <p class="age">19 years old</p>
+                                <h3>Online coaching</h3>
+                                <p>Train from anywhere with structured programs and direct support.</p>
                             </div>
+                            <button class="button button-small">Join Online</button>
                         </div>
-                    </div>
-                    <div class="card">
-                        <div class="text">
+                        <div class="card">
                             <div class="icon">
-                                <svg width="27" height="24" viewBox="0 0 27 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M24.4688 12H20.25V8.57143C20.25 6.68036 21.7635 5.14286 23.625 5.14286H24.0469C24.7482 5.14286 25.3125 4.56964 25.3125 3.85714V1.28571C25.3125 0.573214 24.7482 0 24.0469 0H23.625C18.9633 0 15.1875 3.83571 15.1875 8.57143V21.4286C15.1875 22.8482 16.3213 24 17.7188 24H24.4688C25.8662 24 27 22.8482 27 21.4286V14.5714C27 13.1518 25.8662 12 24.4688 12ZM9.28125 12H5.0625V8.57143C5.0625 6.68036 6.57598 5.14286 8.4375 5.14286H8.85938C9.56074 5.14286 10.125 4.56964 10.125 3.85714V1.28571C10.125 0.573214 9.56074 0 8.85938 0H8.4375C3.77578 0 0 3.83571 0 8.57143V21.4286C0 22.8482 1.13379 24 2.53125 24H9.28125C10.6787 24 11.8125 22.8482 11.8125 21.4286V14.5714C11.8125 13.1518 10.6787 12 9.28125 12Z" fill="none"/>
-                                </svg>
-                            </div>
-                            <p>The personalized approach made all the difference. Every workout felt tailored to my goals, and the support kept me accountable.</p>
-                        </div>
-                        <div class="author">
-                            <div class="icon">
-                                <svg width="48" height="48" viewBox="0 0 49 49" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M8.6975 38.2813C11.27 36.4846 13.8221 35.1065 16.3538 34.1469C18.8854 33.1873 21.6008 32.7075 24.5 32.7075C27.3992 32.7075 30.1248 33.1873 32.6769 34.1469C35.229 35.1065 37.7913 36.4846 40.3638 38.2813C42.1604 36.0763 43.4365 33.8508 44.1919 31.605C44.9473 29.3592 45.325 26.9908 45.325 24.5C45.325 18.5792 43.3344 13.6281 39.3531 9.64688C35.3719 5.66563 30.4208 3.675 24.5 3.675C18.5792 3.675 13.6281 5.66563 9.64688 9.64688C5.66563 13.6281 3.675 18.5792 3.675 24.5C3.675 26.9908 4.06292 29.3592 4.83875 31.605C5.61458 33.8508 6.90083 36.0763 8.6975 38.2813ZM18.5281 23.9181C16.9152 22.3052 16.1088 20.3146 16.1088 17.9463C16.1088 15.5779 16.9152 13.5873 18.5281 11.9744C20.141 10.3615 22.1317 9.555 24.5 9.555C26.8683 9.555 28.859 10.3615 30.4719 11.9744C32.0848 13.5873 32.8913 15.5779 32.8913 17.9463C32.8913 20.3146 32.0848 22.3052 30.4719 23.9181C28.859 25.531 26.8683 26.3375 24.5 26.3375C22.1317 26.3375 20.141 25.531 18.5281 23.9181ZM24.5 49C21.1517 49 17.9871 48.3569 15.0063 47.0706C12.0254 45.7844 9.42229 44.0285 7.19688 41.8031C4.97146 39.5777 3.21563 36.9746 1.92938 33.9938C0.643125 31.0129 0 27.8483 0 24.5C0 21.1108 0.643125 17.936 1.92938 14.9756C3.21563 12.0152 4.97146 9.42229 7.19688 7.19688C9.42229 4.97146 12.0254 3.21563 15.0063 1.92938C17.9871 0.643125 21.1517 0 24.5 0C27.8892 0 31.064 0.643125 34.0244 1.92938C36.9848 3.21563 39.5777 4.97146 41.8031 7.19688C44.0285 9.42229 45.7844 12.0152 47.0706 14.9756C48.3569 17.936 49 21.1108 49 24.5C49 27.8483 48.3569 31.0129 47.0706 33.9938C45.7844 36.9746 44.0285 39.5777 41.8031 41.8031C39.5777 44.0285 36.9848 45.7844 34.0244 47.0706C31.064 48.3569 27.8892 49 24.5 49ZM31.0844 44.345C33.2281 43.6917 35.3413 42.5483 37.4238 40.915C35.3413 39.445 33.2179 38.3221 31.0538 37.5463C28.8896 36.7704 26.705 36.3825 24.5 36.3825C22.295 36.3825 20.1104 36.7704 17.9463 37.5463C15.7821 38.3221 13.6588 39.445 11.5762 40.915C13.6588 42.5483 15.7719 43.6917 17.9156 44.345C20.0594 44.9983 22.2542 45.325 24.5 45.325C26.7458 45.325 28.9406 44.9983 31.0844 44.345ZM27.8994 21.3456C28.7773 20.4677 29.2163 19.3346 29.2163 17.9463C29.2163 16.5579 28.7773 15.4248 27.8994 14.5469C27.0215 13.669 25.8883 13.23 24.5 13.23C23.1117 13.23 21.9785 13.669 21.1006 14.5469C20.2227 15.4248 19.7837 16.5579 19.7837 17.9463C19.7837 19.3346 20.2227 20.4677 21.1006 21.3456C21.9785 22.2235 23.1117 22.6625 24.5 22.6625C25.8883 22.6625 27.0215 22.2235 27.8994 21.3456Z" fill="none"/>
+                                <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M9.32749 29.3337L14.6574 19.3337L3.99756 18.0003L19.9873 2.66699H22.6523L17.3224 12.667L27.9822 14.0003L11.9924 29.3337H9.32749Z" fill="black"/>
                                 </svg>
                             </div>
                             <div class="text">
-                                <p class="subheading subheading-bold">Sarah K.</p>
-                                <p class="age">22 years old</p>
+                                <h3>12-week transformation</h3>
+                                <p>A complete body transformation program designed for maximum results.</p>
                             </div>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <div class="text">
-                            <div class="icon">
-                                <svg width="27" height="24" viewBox="0 0 27 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M24.4688 12H20.25V8.57143C20.25 6.68036 21.7635 5.14286 23.625 5.14286H24.0469C24.7482 5.14286 25.3125 4.56964 25.3125 3.85714V1.28571C25.3125 0.573214 24.7482 0 24.0469 0H23.625C18.9633 0 15.1875 3.83571 15.1875 8.57143V21.4286C15.1875 22.8482 16.3213 24 17.7188 24H24.4688C25.8662 24 27 22.8482 27 21.4286V14.5714C27 13.1518 25.8662 12 24.4688 12ZM9.28125 12H5.0625V8.57143C5.0625 6.68036 6.57598 5.14286 8.4375 5.14286H8.85938C9.56074 5.14286 10.125 4.56964 10.125 3.85714V1.28571C10.125 0.573214 9.56074 0 8.85938 0H8.4375C3.77578 0 0 3.83571 0 8.57143V21.4286C0 22.8482 1.13379 24 2.53125 24H9.28125C10.6787 24 11.8125 22.8482 11.8125 21.4286V14.5714C11.8125 13.1518 10.6787 12 9.28125 12Z" fill="none"/>
-                                </svg>
-                            </div>
-                            <p>The 12-week program completely changed my routine and mindset. I gained strength, saw real progress, and feel more confident than ever.</p>
-                        </div>
-                        <div class="author">
-                            <div class="icon">
-                                <svg width="48" height="48" viewBox="0 0 49 49" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M8.6975 38.2813C11.27 36.4846 13.8221 35.1065 16.3538 34.1469C18.8854 33.1873 21.6008 32.7075 24.5 32.7075C27.3992 32.7075 30.1248 33.1873 32.6769 34.1469C35.229 35.1065 37.7913 36.4846 40.3638 38.2813C42.1604 36.0763 43.4365 33.8508 44.1919 31.605C44.9473 29.3592 45.325 26.9908 45.325 24.5C45.325 18.5792 43.3344 13.6281 39.3531 9.64688C35.3719 5.66563 30.4208 3.675 24.5 3.675C18.5792 3.675 13.6281 5.66563 9.64688 9.64688C5.66563 13.6281 3.675 18.5792 3.675 24.5C3.675 26.9908 4.06292 29.3592 4.83875 31.605C5.61458 33.8508 6.90083 36.0763 8.6975 38.2813ZM18.5281 23.9181C16.9152 22.3052 16.1088 20.3146 16.1088 17.9463C16.1088 15.5779 16.9152 13.5873 18.5281 11.9744C20.141 10.3615 22.1317 9.555 24.5 9.555C26.8683 9.555 28.859 10.3615 30.4719 11.9744C32.0848 13.5873 32.8913 15.5779 32.8913 17.9463C32.8913 20.3146 32.0848 22.3052 30.4719 23.9181C28.859 25.531 26.8683 26.3375 24.5 26.3375C22.1317 26.3375 20.141 25.531 18.5281 23.9181ZM24.5 49C21.1517 49 17.9871 48.3569 15.0063 47.0706C12.0254 45.7844 9.42229 44.0285 7.19688 41.8031C4.97146 39.5777 3.21563 36.9746 1.92938 33.9938C0.643125 31.0129 0 27.8483 0 24.5C0 21.1108 0.643125 17.936 1.92938 14.9756C3.21563 12.0152 4.97146 9.42229 7.19688 7.19688C9.42229 4.97146 12.0254 3.21563 15.0063 1.92938C17.9871 0.643125 21.1517 0 24.5 0C27.8892 0 31.064 0.643125 34.0244 1.92938C36.9848 3.21563 39.5777 4.97146 41.8031 7.19688C44.0285 9.42229 45.7844 12.0152 47.0706 14.9756C48.3569 17.936 49 21.1108 49 24.5C49 27.8483 48.3569 31.0129 47.0706 33.9938C45.7844 36.9746 44.0285 39.5777 41.8031 41.8031C39.5777 44.0285 36.9848 45.7844 34.0244 47.0706C31.064 48.3569 27.8892 49 24.5 49ZM31.0844 44.345C33.2281 43.6917 35.3413 42.5483 37.4238 40.915C35.3413 39.445 33.2179 38.3221 31.0538 37.5463C28.8896 36.7704 26.705 36.3825 24.5 36.3825C22.295 36.3825 20.1104 36.7704 17.9463 37.5463C15.7821 38.3221 13.6588 39.445 11.5762 40.915C13.6588 42.5483 15.7719 43.6917 17.9156 44.345C20.0594 44.9983 22.2542 45.325 24.5 45.325C26.7458 45.325 28.9406 44.9983 31.0844 44.345ZM27.8994 21.3456C28.7773 20.4677 29.2163 19.3346 29.2163 17.9463C29.2163 16.5579 28.7773 15.4248 27.8994 14.5469C27.0215 13.669 25.8883 13.23 24.5 13.23C23.1117 13.23 21.9785 13.669 21.1006 14.5469C20.2227 15.4248 19.7837 16.5579 19.7837 17.9463C19.7837 19.3346 20.2227 20.4677 21.1006 21.3456C21.9785 22.2235 23.1117 22.6625 24.5 22.6625C25.8883 22.6625 27.0215 22.2235 27.8994 21.3456Z" fill="none"/>
-                                </svg>
-                            </div>
-                            <div class="text">
-                                <p class="subheading subheading-bold">David M.</p>
-                                <p class="age">20 years old</p>
-                            </div>
+                            <button class="button button-small">Apply Now</button>
                         </div>
                     </div>
                 </div>
-            </div>
-        </section>
+            </section>
 
-        <section id="contact" class="section contact">
-            <div class="container">
-                <div class="heading">
-                    <p class="tag">Contact Me</p>
-                    <h2>Ready start your <span class="highlight">transformation</span>?</h2>
-                    <p class="subheading">Take the first step today and book your free consultation.</p>
+            <section id="testimonials" class="section testimonials">
+                <div class="container">
+                    <div class="heading">
+                        <p class="tag">Testimonials</p>
+                        <h2>What <span class="highlight">my clients</span> say</h2>
+                        <p class="subheading">See how personalized coaching makes a difference.</p>
+                    </div>
+                    <div class="cards">
+                        <div class="card">
+                            <div class="text">
+                                <div class="icon">
+                                    <svg width="27" height="24" viewBox="0 0 27 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M24.4688 12H20.25V8.57143C20.25 6.68036 21.7635 5.14286 23.625 5.14286H24.0469C24.7482 5.14286 25.3125 4.56964 25.3125 3.85714V1.28571C25.3125 0.573214 24.7482 0 24.0469 0H23.625C18.9633 0 15.1875 3.83571 15.1875 8.57143V21.4286C15.1875 22.8482 16.3213 24 17.7188 24H24.4688C25.8662 24 27 22.8482 27 21.4286V14.5714C27 13.1518 25.8662 12 24.4688 12ZM9.28125 12H5.0625V8.57143C5.0625 6.68036 6.57598 5.14286 8.4375 5.14286H8.85938C9.56074 5.14286 10.125 4.56964 10.125 3.85714V1.28571C10.125 0.573214 9.56074 0 8.85938 0H8.4375C3.77578 0 0 3.83571 0 8.57143V21.4286C0 22.8482 1.13379 24 2.53125 24H9.28125C10.6787 24 11.8125 22.8482 11.8125 21.4286V14.5714C11.8125 13.1518 10.6787 12 9.28125 12Z" fill="none"/>
+                                    </svg>
+                                </div>
+                                <p>I’ve tried multiple programs before, but this was the first time I saw real progress. I gained strength, lost fat, and actually enjoyed training again.</p>
+                            </div>
+                            <div class="author">
+                                <div class="icon">
+                                    <svg width="48" height="48" viewBox="0 0 49 49" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M8.6975 38.2813C11.27 36.4846 13.8221 35.1065 16.3538 34.1469C18.8854 33.1873 21.6008 32.7075 24.5 32.7075C27.3992 32.7075 30.1248 33.1873 32.6769 34.1469C35.229 35.1065 37.7913 36.4846 40.3638 38.2813C42.1604 36.0763 43.4365 33.8508 44.1919 31.605C44.9473 29.3592 45.325 26.9908 45.325 24.5C45.325 18.5792 43.3344 13.6281 39.3531 9.64688C35.3719 5.66563 30.4208 3.675 24.5 3.675C18.5792 3.675 13.6281 5.66563 9.64688 9.64688C5.66563 13.6281 3.675 18.5792 3.675 24.5C3.675 26.9908 4.06292 29.3592 4.83875 31.605C5.61458 33.8508 6.90083 36.0763 8.6975 38.2813ZM18.5281 23.9181C16.9152 22.3052 16.1088 20.3146 16.1088 17.9463C16.1088 15.5779 16.9152 13.5873 18.5281 11.9744C20.141 10.3615 22.1317 9.555 24.5 9.555C26.8683 9.555 28.859 10.3615 30.4719 11.9744C32.0848 13.5873 32.8913 15.5779 32.8913 17.9463C32.8913 20.3146 32.0848 22.3052 30.4719 23.9181C28.859 25.531 26.8683 26.3375 24.5 26.3375C22.1317 26.3375 20.141 25.531 18.5281 23.9181ZM24.5 49C21.1517 49 17.9871 48.3569 15.0063 47.0706C12.0254 45.7844 9.42229 44.0285 7.19688 41.8031C4.97146 39.5777 3.21563 36.9746 1.92938 33.9938C0.643125 31.0129 0 27.8483 0 24.5C0 21.1108 0.643125 17.936 1.92938 14.9756C3.21563 12.0152 4.97146 9.42229 7.19688 7.19688C9.42229 4.97146 12.0254 3.21563 15.0063 1.92938C17.9871 0.643125 21.1517 0 24.5 0C27.8892 0 31.064 0.643125 34.0244 1.92938C36.9848 3.21563 39.5777 4.97146 41.8031 7.19688C44.0285 9.42229 45.7844 12.0152 47.0706 14.9756C48.3569 17.936 49 21.1108 49 24.5C49 27.8483 48.3569 31.0129 47.0706 33.9938C45.7844 36.9746 44.0285 39.5777 41.8031 41.8031C39.5777 44.0285 36.9848 45.7844 34.0244 47.0706C31.064 48.3569 27.8892 49 24.5 49ZM31.0844 44.345C33.2281 43.6917 35.3413 42.5483 37.4238 40.915C35.3413 39.445 33.2179 38.3221 31.0538 37.5463C28.8896 36.7704 26.705 36.3825 24.5 36.3825C22.295 36.3825 20.1104 36.7704 17.9463 37.5463C15.7821 38.3221 13.6588 39.445 11.5762 40.915C13.6588 42.5483 15.7719 43.6917 17.9156 44.345C20.0594 44.9983 22.2542 45.325 24.5 45.325C26.7458 45.325 28.9406 44.9983 31.0844 44.345ZM27.8994 21.3456C28.7773 20.4677 29.2163 19.3346 29.2163 17.9463C29.2163 16.5579 28.7773 15.4248 27.8994 14.5469C27.0215 13.669 25.8883 13.23 24.5 13.23C23.1117 13.23 21.9785 13.669 21.1006 14.5469C20.2227 15.4248 19.7837 16.5579 19.7837 17.9463C19.7837 19.3346 20.2227 20.4677 21.1006 21.3456C21.9785 22.2235 23.1117 22.6625 24.5 22.6625C25.8883 22.6625 27.0215 22.2235 27.8994 21.3456Z" fill="none"/>
+                                    </svg>
+                                </div>
+                                <div class="text">
+                                    <p class="subheading subheading-bold">Michael R.</p>
+                                    <p class="age">19 years old</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="text">
+                                <div class="icon">
+                                    <svg width="27" height="24" viewBox="0 0 27 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M24.4688 12H20.25V8.57143C20.25 6.68036 21.7635 5.14286 23.625 5.14286H24.0469C24.7482 5.14286 25.3125 4.56964 25.3125 3.85714V1.28571C25.3125 0.573214 24.7482 0 24.0469 0H23.625C18.9633 0 15.1875 3.83571 15.1875 8.57143V21.4286C15.1875 22.8482 16.3213 24 17.7188 24H24.4688C25.8662 24 27 22.8482 27 21.4286V14.5714C27 13.1518 25.8662 12 24.4688 12ZM9.28125 12H5.0625V8.57143C5.0625 6.68036 6.57598 5.14286 8.4375 5.14286H8.85938C9.56074 5.14286 10.125 4.56964 10.125 3.85714V1.28571C10.125 0.573214 9.56074 0 8.85938 0H8.4375C3.77578 0 0 3.83571 0 8.57143V21.4286C0 22.8482 1.13379 24 2.53125 24H9.28125C10.6787 24 11.8125 22.8482 11.8125 21.4286V14.5714C11.8125 13.1518 10.6787 12 9.28125 12Z" fill="none"/>
+                                    </svg>
+                                </div>
+                                <p>The personalized approach made all the difference. Every workout felt tailored to my goals, and the support kept me accountable.</p>
+                            </div>
+                            <div class="author">
+                                <div class="icon">
+                                    <svg width="48" height="48" viewBox="0 0 49 49" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M8.6975 38.2813C11.27 36.4846 13.8221 35.1065 16.3538 34.1469C18.8854 33.1873 21.6008 32.7075 24.5 32.7075C27.3992 32.7075 30.1248 33.1873 32.6769 34.1469C35.229 35.1065 37.7913 36.4846 40.3638 38.2813C42.1604 36.0763 43.4365 33.8508 44.1919 31.605C44.9473 29.3592 45.325 26.9908 45.325 24.5C45.325 18.5792 43.3344 13.6281 39.3531 9.64688C35.3719 5.66563 30.4208 3.675 24.5 3.675C18.5792 3.675 13.6281 5.66563 9.64688 9.64688C5.66563 13.6281 3.675 18.5792 3.675 24.5C3.675 26.9908 4.06292 29.3592 4.83875 31.605C5.61458 33.8508 6.90083 36.0763 8.6975 38.2813ZM18.5281 23.9181C16.9152 22.3052 16.1088 20.3146 16.1088 17.9463C16.1088 15.5779 16.9152 13.5873 18.5281 11.9744C20.141 10.3615 22.1317 9.555 24.5 9.555C26.8683 9.555 28.859 10.3615 30.4719 11.9744C32.0848 13.5873 32.8913 15.5779 32.8913 17.9463C32.8913 20.3146 32.0848 22.3052 30.4719 23.9181C28.859 25.531 26.8683 26.3375 24.5 26.3375C22.1317 26.3375 20.141 25.531 18.5281 23.9181ZM24.5 49C21.1517 49 17.9871 48.3569 15.0063 47.0706C12.0254 45.7844 9.42229 44.0285 7.19688 41.8031C4.97146 39.5777 3.21563 36.9746 1.92938 33.9938C0.643125 31.0129 0 27.8483 0 24.5C0 21.1108 0.643125 17.936 1.92938 14.9756C3.21563 12.0152 4.97146 9.42229 7.19688 7.19688C9.42229 4.97146 12.0254 3.21563 15.0063 1.92938C17.9871 0.643125 21.1517 0 24.5 0C27.8892 0 31.064 0.643125 34.0244 1.92938C36.9848 3.21563 39.5777 4.97146 41.8031 7.19688C44.0285 9.42229 45.7844 12.0152 47.0706 14.9756C48.3569 17.936 49 21.1108 49 24.5C49 27.8483 48.3569 31.0129 47.0706 33.9938C45.7844 36.9746 44.0285 39.5777 41.8031 41.8031C39.5777 44.0285 36.9848 45.7844 34.0244 47.0706C31.064 48.3569 27.8892 49 24.5 49ZM31.0844 44.345C33.2281 43.6917 35.3413 42.5483 37.4238 40.915C35.3413 39.445 33.2179 38.3221 31.0538 37.5463C28.8896 36.7704 26.705 36.3825 24.5 36.3825C22.295 36.3825 20.1104 36.7704 17.9463 37.5463C15.7821 38.3221 13.6588 39.445 11.5762 40.915C13.6588 42.5483 15.7719 43.6917 17.9156 44.345C20.0594 44.9983 22.2542 45.325 24.5 45.325C26.7458 45.325 28.9406 44.9983 31.0844 44.345ZM27.8994 21.3456C28.7773 20.4677 29.2163 19.3346 29.2163 17.9463C29.2163 16.5579 28.7773 15.4248 27.8994 14.5469C27.0215 13.669 25.8883 13.23 24.5 13.23C23.1117 13.23 21.9785 13.669 21.1006 14.5469C20.2227 15.4248 19.7837 16.5579 19.7837 17.9463C19.7837 19.3346 20.2227 20.4677 21.1006 21.3456C21.9785 22.2235 23.1117 22.6625 24.5 22.6625C25.8883 22.6625 27.0215 22.2235 27.8994 21.3456Z" fill="none"/>
+                                    </svg>
+                                </div>
+                                <div class="text">
+                                    <p class="subheading subheading-bold">Sarah K.</p>
+                                    <p class="age">22 years old</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="text">
+                                <div class="icon">
+                                    <svg width="27" height="24" viewBox="0 0 27 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M24.4688 12H20.25V8.57143C20.25 6.68036 21.7635 5.14286 23.625 5.14286H24.0469C24.7482 5.14286 25.3125 4.56964 25.3125 3.85714V1.28571C25.3125 0.573214 24.7482 0 24.0469 0H23.625C18.9633 0 15.1875 3.83571 15.1875 8.57143V21.4286C15.1875 22.8482 16.3213 24 17.7188 24H24.4688C25.8662 24 27 22.8482 27 21.4286V14.5714C27 13.1518 25.8662 12 24.4688 12ZM9.28125 12H5.0625V8.57143C5.0625 6.68036 6.57598 5.14286 8.4375 5.14286H8.85938C9.56074 5.14286 10.125 4.56964 10.125 3.85714V1.28571C10.125 0.573214 9.56074 0 8.85938 0H8.4375C3.77578 0 0 3.83571 0 8.57143V21.4286C0 22.8482 1.13379 24 2.53125 24H9.28125C10.6787 24 11.8125 22.8482 11.8125 21.4286V14.5714C11.8125 13.1518 10.6787 12 9.28125 12Z" fill="none"/>
+                                    </svg>
+                                </div>
+                                <p>The 12-week program completely changed my routine and mindset. I gained strength, saw real progress, and feel more confident than ever.</p>
+                            </div>
+                            <div class="author">
+                                <div class="icon">
+                                    <svg width="48" height="48" viewBox="0 0 49 49" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M8.6975 38.2813C11.27 36.4846 13.8221 35.1065 16.3538 34.1469C18.8854 33.1873 21.6008 32.7075 24.5 32.7075C27.3992 32.7075 30.1248 33.1873 32.6769 34.1469C35.229 35.1065 37.7913 36.4846 40.3638 38.2813C42.1604 36.0763 43.4365 33.8508 44.1919 31.605C44.9473 29.3592 45.325 26.9908 45.325 24.5C45.325 18.5792 43.3344 13.6281 39.3531 9.64688C35.3719 5.66563 30.4208 3.675 24.5 3.675C18.5792 3.675 13.6281 5.66563 9.64688 9.64688C5.66563 13.6281 3.675 18.5792 3.675 24.5C3.675 26.9908 4.06292 29.3592 4.83875 31.605C5.61458 33.8508 6.90083 36.0763 8.6975 38.2813ZM18.5281 23.9181C16.9152 22.3052 16.1088 20.3146 16.1088 17.9463C16.1088 15.5779 16.9152 13.5873 18.5281 11.9744C20.141 10.3615 22.1317 9.555 24.5 9.555C26.8683 9.555 28.859 10.3615 30.4719 11.9744C32.0848 13.5873 32.8913 15.5779 32.8913 17.9463C32.8913 20.3146 32.0848 22.3052 30.4719 23.9181C28.859 25.531 26.8683 26.3375 24.5 26.3375C22.1317 26.3375 20.141 25.531 18.5281 23.9181ZM24.5 49C21.1517 49 17.9871 48.3569 15.0063 47.0706C12.0254 45.7844 9.42229 44.0285 7.19688 41.8031C4.97146 39.5777 3.21563 36.9746 1.92938 33.9938C0.643125 31.0129 0 27.8483 0 24.5C0 21.1108 0.643125 17.936 1.92938 14.9756C3.21563 12.0152 4.97146 9.42229 7.19688 7.19688C9.42229 4.97146 12.0254 3.21563 15.0063 1.92938C17.9871 0.643125 21.1517 0 24.5 0C27.8892 0 31.064 0.643125 34.0244 1.92938C36.9848 3.21563 39.5777 4.97146 41.8031 7.19688C44.0285 9.42229 45.7844 12.0152 47.0706 14.9756C48.3569 17.936 49 21.1108 49 24.5C49 27.8483 48.3569 31.0129 47.0706 33.9938C45.7844 36.9746 44.0285 39.5777 41.8031 41.8031C39.5777 44.0285 36.9848 45.7844 34.0244 47.0706C31.064 48.3569 27.8892 49 24.5 49ZM31.0844 44.345C33.2281 43.6917 35.3413 42.5483 37.4238 40.915C35.3413 39.445 33.2179 38.3221 31.0538 37.5463C28.8896 36.7704 26.705 36.3825 24.5 36.3825C22.295 36.3825 20.1104 36.7704 17.9463 37.5463C15.7821 38.3221 13.6588 39.445 11.5762 40.915C13.6588 42.5483 15.7719 43.6917 17.9156 44.345C20.0594 44.9983 22.2542 45.325 24.5 45.325C26.7458 45.325 28.9406 44.9983 31.0844 44.345ZM27.8994 21.3456C28.7773 20.4677 29.2163 19.3346 29.2163 17.9463C29.2163 16.5579 28.7773 15.4248 27.8994 14.5469C27.0215 13.669 25.8883 13.23 24.5 13.23C23.1117 13.23 21.9785 13.669 21.1006 14.5469C20.2227 15.4248 19.7837 16.5579 19.7837 17.9463C19.7837 19.3346 20.2227 20.4677 21.1006 21.3456C21.9785 22.2235 23.1117 22.6625 24.5 22.6625C25.8883 22.6625 27.0215 22.2235 27.8994 21.3456Z" fill="none"/>
+                                    </svg>
+                                </div>
+                                <div class="text">
+                                    <p class="subheading subheading-bold">David M.</p>
+                                    <p class="age">20 years old</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <button class="button">Book Your Free Session</button>
-            </div>
-        </section>
+            </section>
+
+            <section id="contact" class="section contact">
+                <div class="container">
+                    <div class="heading">
+                        <p class="tag">Contact Me</p>
+                        <h2>Ready start your <span class="highlight">transformation</span>?</h2>
+                        <p class="subheading">Take the first step today and book your free consultation.</p>
+                    </div>
+                    <button class="button">Book Your Free Session</button>
+                </div>
+            </section>
+
+        </main>
 
         <footer class="section footer">
             <div class="container">
@@ -232,19 +244,19 @@
                 </nav>
                 </div>
                 <div class="bottom">
-                    <p class="copyright">© 2026 Personal Trainer. All rights reserved. Images designed by <a href="https://www.freepik.com/">Freepik</a>.</p>
-                    <ul class="social-links">
-                        <a href="javascript:void(0)" class="facebook">
+                    <p class="copyright">© 2026 Personal Trainer. All rights reserved. Images designed by <a href="https://www.freepik.com/" target="_blank">Freepik</a>.</p>
+                    <div class="social-links">
+                        <a href="javascript:void(0)" class="facebook" aria-label="go to my Facebook page">
                             <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M27.5625 14C27.5625 6.50781 21.4922 0.4375 14 0.4375C6.50781 0.4375 0.4375 6.50781 0.4375 14C0.4375 20.7692 5.39711 26.3802 11.8809 27.3984V17.9205H8.43555V14H11.8809V11.0119C11.8809 7.61305 13.9043 5.73562 17.0034 5.73562C18.4877 5.73562 20.0397 6.00031 20.0397 6.00031V9.33625H18.3291C16.6447 9.33625 16.1191 10.3819 16.1191 11.4543V14H19.8805L19.279 17.9205H16.1191V27.3984C22.6029 26.3802 27.5625 20.7692 27.5625 14Z" fill="none"/>
                             </svg>
                         </a>
-                        <a href="javascript:void(0)" class="instagram">
+                        <a href="javascript:void(0)" class="instagram" aria-label="go to my Instagram page">
                             <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M14.006 6.81749C10.1414 6.81749 7.02425 9.93468 7.02425 13.7993C7.02425 17.6638 10.1414 20.781 14.006 20.781C17.8706 20.781 20.9878 17.6638 20.9878 13.7993C20.9878 9.93468 17.8706 6.81749 14.006 6.81749ZM14.006 18.3383C11.5086 18.3383 9.46696 16.3027 9.46696 13.7993C9.46696 11.2958 11.5025 9.2602 14.006 9.2602C16.5095 9.2602 18.5451 11.2958 18.5451 13.7993C18.5451 16.3027 16.5034 18.3383 14.006 18.3383ZM22.9019 6.5319C22.9019 7.43728 22.1727 8.16037 21.2734 8.16037C20.368 8.16037 19.6449 7.43121 19.6449 6.5319C19.6449 5.6326 20.3741 4.90343 21.2734 4.90343C22.1727 4.90343 22.9019 5.6326 22.9019 6.5319ZM27.526 8.18468C27.4227 6.00326 26.9244 4.07096 25.3263 2.47895C23.7343 0.886936 21.802 0.388672 19.6206 0.279297C17.3723 0.151693 10.6336 0.151693 8.38536 0.279297C6.21002 0.382595 4.27772 0.880859 2.67963 2.47287C1.08154 4.06489 0.589355 5.99718 0.47998 8.1786C0.352376 10.4269 0.352376 17.1656 0.47998 19.4138C0.583279 21.5953 1.08154 23.5276 2.67963 25.1196C4.27772 26.7116 6.20394 27.2099 8.38536 27.3192C10.6336 27.4468 17.3723 27.4468 19.6206 27.3192C21.802 27.2159 23.7343 26.7177 25.3263 25.1196C26.9183 23.5276 27.4166 21.5953 27.526 19.4138C27.6536 17.1656 27.6536 10.4329 27.526 8.18468ZM24.6215 21.8262C24.1475 23.0171 23.23 23.9347 22.0329 24.4147C20.2404 25.1257 15.9869 24.9616 14.006 24.9616C12.0251 24.9616 7.76557 25.1196 5.97911 24.4147C4.78814 23.9408 3.87061 23.0232 3.39057 21.8262C2.67963 20.0336 2.8437 15.7802 2.8437 13.7993C2.8437 11.8184 2.68571 7.55881 3.39057 5.77235C3.86453 4.58138 4.78206 3.66385 5.97911 3.18381C7.77165 2.47287 12.0251 2.63694 14.006 2.63694C15.9869 2.63694 20.2465 2.47895 22.0329 3.18381C23.2239 3.65777 24.1414 4.5753 24.6215 5.77235C25.3324 7.56489 25.1683 11.8184 25.1683 13.7993C25.1683 15.7802 25.3324 20.0397 24.6215 21.8262Z" fill="none"/>
                             </svg>
                         </a>
-                    </ul>
+                    </div>
                 </div>
             </div>
         </footer>

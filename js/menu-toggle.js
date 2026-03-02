@@ -1,19 +1,25 @@
 const navigation = document.querySelector(".section.header").querySelector(".navigation");
 const navbarCtaButton = document.querySelector(".section.header").querySelector("#navbar-cta-button");
-const aside = document.querySelector(".section.aside");
+const mobileMenu = document.querySelector(".mobile-menu");
 const openMenuButton = document.getElementById("open-menu-button");
 const closeMenuButton = document.getElementById("close-menu-button");
 
 toggleMenuVisiblity();
 
 function openMenu () {
-    aside.style.display = "block";
+    mobileMenu.style.display = "block";
+    mobileMenu.setAttribute("aria-hidden", "false");
     openMenuButton.style.display = "none";
+    openMenuButton.setAttribute("aria-expanded", "true");
+
 };
 
 function closeMenu () {
-    aside.style.display = "none";
+    mobileMenu.style.display = "none";
+    mobileMenu.setAttribute("aria-hidden", "true");
     openMenuButton.style.display = "block";
+    openMenuButton.setAttribute("aria-expanded", "false");
+
 };
 
 openMenuButton.addEventListener("click", openMenu);
@@ -22,21 +28,34 @@ closeMenuButton.addEventListener("click", closeMenu);
 function toggleMenuVisiblity () {
     if (window.innerWidth >= 976) {
         navigation.style.display = "block";
+        navigation.setAttribute("aria-hidden", "false");
         navbarCtaButton.style.display = "block";
-        aside.style.display = "none";
+        navbarCtaButton.setAttribute("aria-hidden", "false");
+        mobileMenu.style.display = "none";
+        mobileMenu.setAttribute("aria-hidden", "true");
         openMenuButton.style.display = "none";
+        openMenuButton.setAttribute("aria-hidden", "true");
     } else if (window.innerWidth < 976) {
         navigation.style.display = "none";
+        navigation.setAttribute("aria-hidden", "true");
         navbarCtaButton.style.display = "none";
-        aside.style.display = "none";
-        openMenuButton.style.display = "flex";    
+        navbarCtaButton.setAttribute("aria-hidden", "true");
+        mobileMenu.style.display = "none";
+        mobileMenu.setAttribute("aria-hidden", "true");
+        openMenuButton.style.display = "flex";
+        openMenuButton.setAttribute("aria-hidden", "false");
+
+        if (openMenuButton.getAttribute("aria-expanded") !== "true") {
+            mobileMenu.style.display = "none";
+            mobileMenu.setAttribute("aria-hidden", "true");
+        }
     }
 };
 
 window.addEventListener("resize", toggleMenuVisiblity);
 
-aside.addEventListener("click", e => {
-    if (e.target !== aside) {
+mobileMenu.addEventListener("click", e => {
+    if (e.target !== mobileMenu) {
         closeMenu();
     };
 });

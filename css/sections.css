@@ -4,6 +4,7 @@
 
 .section.header {
     width: 100%;
+    height: 5rem;
     position: fixed;
     top: 0;
     z-index: 9999;
@@ -43,7 +44,7 @@
 ========================================================================================================
 */
 
-.section.aside {
+.mobile-menu {
     display: none;
     height: 100%;
     width: 18rem;
@@ -55,33 +56,35 @@
     background-color: hsla(0, 0%, 0%, 0.65);
 }
 
-.section.aside .navigation-links {
+.mobile-menu .navigation-links {
     flex-direction: column;
     gap: 0;
 }
 
-.section.aside .navigation-links li {
+.mobile-menu .navigation-links li {
     width: 100%;
 }
 
-.section.aside .navigation-links li:has(.button) {
+.mobile-menu .navigation-links li:has(.button) {
     padding: 1.25rem 2rem;
 }
 
-.section.aside .navigation-links li:not(:has(.button)):hover {
+.mobile-menu .navigation-links li:not(:has(.button)):hover {
     background-color: hsla(0, 0%, 100%, 0.1);
 }
 
 #close-menu-button {
     width: 100%;
-    padding: 1.25rem 2rem;
-}
-
-.section.aside .navigation-links li:has(#close-menu-button) {
     margin-top: 0.625rem;
+    padding: 1.25rem 2rem;
+
 }
 
-.section.aside .navigation-links li a:not(.button) {
+#close-menu-button:hover {
+    background-color: hsla(0, 0%, 100%, 0.1);
+}
+
+.mobile-menu .navigation-links li a:not(.button) {
     padding: 1.25rem 2rem;
     height: 100%;
     justify-content: flex-start;
@@ -318,6 +321,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    gap: 2rem;
 }
 
 .section.footer .navigation-links a {
