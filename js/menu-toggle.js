@@ -19,7 +19,6 @@ function closeMenu () {
     mobileMenu.setAttribute("aria-hidden", "true");
     openMenuButton.style.display = "block";
     openMenuButton.setAttribute("aria-expanded", "false");
-
 };
 
 openMenuButton.addEventListener("click", openMenu);
@@ -48,8 +47,8 @@ function toggleMenuVisiblity () {
         if (openMenuButton.getAttribute("aria-expanded") !== "true") {
             mobileMenu.style.display = "none";
             mobileMenu.setAttribute("aria-hidden", "true");
-        }
-    }
+        };
+    };
 };
 
 window.addEventListener("resize", toggleMenuVisiblity);
