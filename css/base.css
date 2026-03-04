@@ -46,7 +46,7 @@ a:not(.button):hover {
     text-decoration: none;
     display: inline-block;
     text-align: center;
-    padding: 1rem 1.5rem;
+    padding: 1rem 2rem;
     background-color: var(--brand-accent);
     border: none;
     color: hsl(0, 0%, 0%);

@@ -39,12 +39,18 @@
 }
 
 .navigation.header-navigation .container {
+    height: 100%;
     display: flex;
     margin: 0 auto;
     width: min(calc(100% - 2.5rem), 80rem);
     align-items: center;
     justify-content: flex-end;
     padding: 1rem;
+}
+
+.navigation.header-navigation .navigation-links {
+    height: fit-content;
+    min-height: 100%;
 }
 
 .navigation.header-navigation .navigation-links a:not(.button):hover {
