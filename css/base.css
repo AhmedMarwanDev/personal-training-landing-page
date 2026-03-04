@@ -167,7 +167,7 @@ a:not(.button):hover {
     .section.hero .container::before {
         background-image: 
         linear-gradient(90deg, #000000 20%, #0000 90%),
-        url(../assets/images/hero/bodybuilder-training-arm-with-resistance-band.webp);
+        url(https://ahmedmarwandev.github.io/personal-training-landing-page/assets/images/hero/bodybuilder-training-arm-with-resistance-band.webp);
         opacity: 0.56;
     }
 }
@@ -258,7 +258,7 @@ a:not(.button):hover {
     .section.hero .container::before {
         background-image:
         linear-gradient(90deg, #000000 10%, #00000000 80%),
-        url(../assets/images/hero/bodybuilder-training-arm-with-resistance-band.webp);
+        url(https://ahmedmarwandev.github.io/personal-training-landing-page/assets/images/hero/bodybuilder-training-arm-with-resistance-band.webp);
     }
 
     .navigation.header-navigation{
