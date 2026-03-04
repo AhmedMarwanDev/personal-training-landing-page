@@ -7,7 +7,7 @@
     height: 5rem;
     position: fixed;
     top: 0;
-    z-index: 9999;
+    z-index: 999;
     backdrop-filter: blur(4px);
 }
 
@@ -27,69 +27,98 @@
     fill: var(--text-main);
 }
 
-.section.header .navigation {
-    align-self: stretch;
-    margin-right: 2.5rem;
-}
-
-.section.header .navigation-links a:hover {
-    color: var(--text-main);
-}
-
-#open-menu-button {
-    display: none;
-}
-
-/* ASIDE
-========================================================================================================
-*/
-
-.mobile-menu {
-    display: none;
-    height: 100%;
-    width: 18rem;
+.navigation.header-navigation {
+    width: 100%;
+    transform: none;
+    transition: none;
+    height: 5rem;
     position: fixed;
     top: 0;
     right: 0;
     z-index: 9999;
-    backdrop-filter: blur(4px);
-    background-color: hsla(0, 0%, 0%, 0.65);
 }
 
-.mobile-menu .navigation-links {
-    flex-direction: column;
-    gap: 0;
+.navigation.header-navigation .container {
+    display: flex;
+    margin: 0 auto;
+    width: min(calc(100% - 2.5rem), 80rem);
+    align-items: center;
+    justify-content: flex-end;
+    padding: 1rem;
 }
 
-.mobile-menu .navigation-links li {
-    width: 100%;
+.navigation.header-navigation .navigation-links a:not(.button):hover {
+    color: var(--text-main);
 }
 
-.mobile-menu .navigation-links li:has(.button) {
-    padding: 1.25rem 2rem;
+#open-menu-button, #close-menu-button{
+    display: none;
 }
 
-.mobile-menu .navigation-links li:not(:has(.button)):hover {
-    background-color: hsla(0, 0%, 100%, 0.1);
+.navigation.header-navigation.is-mobile {
+    transition: transform var(--transition);
 }
 
-#close-menu-button {
-    width: 100%;
-    margin-top: 0.625rem;
-    padding: 1.25rem 2rem;
-
+.navigation.header-navigation.is-open {
+    transform: none;
 }
 
-#close-menu-button:hover {
-    background-color: hsla(0, 0%, 100%, 0.1);
-}
+@media (max-width: 976px) {
+    #open-menu-button, #close-menu-button {
+        display: flex;
+    }
+    
+    .navigation.header-navigation {
+        height: 100%;
+        width: 18rem;
+        transform: translateX(100%);
+        position: fixed;
+        top: 0;
+        right: 0;
+        z-index: 9999;
+        background-color: hsla(0, 0%, 0%, 0.65);
+    }
 
-.mobile-menu .navigation-links li a:not(.button) {
-    padding: 1.25rem 2rem;
-    height: 100%;
-    justify-content: flex-start;
-}
+    .navigation.header-navigation .container {
+        display: block;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+    
+    #close-menu-button {
+        width: 100%;
+        margin-top: 0.625rem;
+        padding: 1.25rem 2rem;
+    }
 
+    #close-menu-button:hover {
+        background-color: hsla(0, 0%, 100%, 0.1);
+    }
+    
+    .navigation.header-navigation .navigation-links {
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .navigation.header-navigation .navigation-links li {
+        width: 100%;
+    }
+
+    .navigation.header-navigation .navigation-links li:has(.button) {
+        padding: 1.25rem 2rem;
+    }
+
+    .navigation.header-navigation .navigation-links li:not(:has(.button)):hover {
+        background-color: hsla(0, 0%, 100%, 0.1);
+    }
+
+    .navigation.header-navigation .navigation-links li a:not(.button) {
+        padding: 1.25rem 2rem;
+        height: 100%;
+        justify-content: flex-start;
+    }
+}
 
 /* HERO
 ========================================================================================================

@@ -30,16 +30,7 @@
                        <path d="M9.1 14.0004H4.9C3.73625 14.0004 2.8 14.9366 2.8 16.1004V25.2004H0.7C0.315 25.2004 0 25.5154 0 25.9004V30.1004C0 30.4854 0.315 30.8004 0.7 30.8004H2.8V39.9004C2.8 41.0641 3.73625 42.0004 4.9 42.0004H9.1C10.2637 42.0004 11.2 41.0641 11.2 39.9004V16.1004C11.2 14.9366 10.2637 14.0004 9.1 14.0004ZM55.3 25.2004H53.2V16.1004C53.2 14.9366 52.2637 14.0004 51.1 14.0004H46.9C45.7362 14.0004 44.8 14.9366 44.8 16.1004V39.9004C44.8 41.0641 45.7362 42.0004 46.9 42.0004H51.1C52.2637 42.0004 53.2 41.0641 53.2 39.9004V30.8004H55.3C55.685 30.8004 56 30.4854 56 30.1004V25.9004C56 25.5154 55.685 25.2004 55.3 25.2004ZM39.9 8.40039H35.7C34.5362 8.40039 33.6 9.33664 33.6 10.5004V25.2004H22.4V10.5004C22.4 9.33664 21.4637 8.40039 20.3 8.40039H16.1C14.9362 8.40039 14 9.33664 14 10.5004V45.5004C14 46.6641 14.9362 47.6004 16.1 47.6004H20.3C21.4637 47.6004 22.4 46.6641 22.4 45.5004V30.8004H33.6V45.5004C33.6 46.6641 34.5362 47.6004 35.7 47.6004H39.9C41.0637 47.6004 42 46.6641 42 45.5004V10.5004C42 9.33664 41.0637 8.40039 39.9 8.40039Z" fill="none"/>
                     </svg>
                 </div>
-                <nav class="navigation" aria-label="desktop navigation">
-                    <ul class="navigation-links">
-                        <li><a href="#hero">Home</a></li>
-                        <li><a href="#about">About</a></li>
-                        <li><a href="#programs">Programs</a></li>
-                        <li><a href="#testimonials">Testimonials</a></li>
-                    </ul> 
-                </nav>
-                <a href="#contact" class="button" id="navbar-cta-button">Book a Free Session</a>
-                <button class="menu-button" id="open-menu-button" title="Open navigation menu" aria-label="open navigation menu" aria-label="Open navigation menu" aria-expanded="false" aria-controls="mobile-menu">
+                <button class="menu-button" id="open-menu-button" title="Open navigation menu" aria-label="open navigation menu" aria-expanded="false" aria-controls="navigation">
                     <svg width="31" height="24" viewBox="0 0 31 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M0 3.42857V0H30.8571V3.42857H0ZM0 24V20.5714H30.8571V24H0ZM0 13.7143V10.2857H30.8571V13.7143H0Z" fill="none"/>
                     </svg>
@@ -47,9 +38,9 @@
             </div>
         </header>
 
-        <div id="mobile-menu" class="mobile-menu" aria-hidden="true">
-            <nav class="navigation" aria-label="mobile navigation">
-                <button class="menu-button" id="close-menu-button" title="Close navigation menu" aria-label="close navigation menu" aria-controls="mobile-menu">
+        <nav id="navigation" class="navigation header-navigation" aria-label="Main navigation">
+            <div class="container">
+                <button class="menu-button" id="close-menu-button" title="Close navigation menu" aria-label="close navigation menu" aria-controls="navigation">
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M2.4 24L0 21.6L9.6 12L0 2.4L2.4 0L12 9.6L21.6 0L24 2.4L14.4 12L24 21.6L21.6 24L12 14.4L2.4 24Z" fill="none"/>
                     </svg>
@@ -59,10 +50,10 @@
                     <li><a href="#about">About</a></li>
                     <li><a href="#programs">Programs</a></li>
                     <li><a href="#testimonials">Testimonials</a></li>
-                    <li><a href="#contact" class="button">Book a Free Session</a></li>
-                </ul>
-            </nav>
-        </div>
+                    <li><a href="#contact" class="button" id="navbar-cta-button">Book a Free Session</a></li>
+                </ul> 
+            </div>
+        </nav>
 
         <main>
 
@@ -241,7 +232,7 @@
                         <li><a href="#testimonials">Testimonials</a></li>
                         <li><a href="#contact">Contact</a></li>
                     </ul>
-                </nav>
+                    </nav>
                 </div>
                 <div class="bottom">
                     <p class="copyright">© 2026 Personal Trainer. All rights reserved. Images designed by <a href="https://www.freepik.com/" target="_blank">Freepik</a>.</p>
@@ -261,6 +252,6 @@
             </div>
         </footer>
     </div>
-    <script src="js/menu-toggle.js"></script>
+    <script src="js/menu-toggle.min.js"></script>
 </body>
 </html>
